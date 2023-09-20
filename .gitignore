@@ -1,0 +1,5 @@
+node_modules
+.env
+firebaseProject1.json
+firebaseProject2.json
+foodtrack.json
