@@ -4,7 +4,7 @@ const admin = require('firebase-admin');
 const firstApp = admin.initializeApp(
   {
     credential: admin.credential.cert(process.env.GOOGLE_APPLICATION_CREDENTIALS_1),
-    databaseURL: 'https://prueba-cloud-functions-6e0c9.firebaseio.com'
+    databaseURL: process.env.FIREBASE_DATABASE_URL_1
   }, 
   'first'
 );
@@ -12,14 +12,14 @@ const firstApp = admin.initializeApp(
 const secondApp = admin.initializeApp(
   {
     credential: admin.credential.cert(process.env.GOOGLE_APPLICATION_CREDENTIALS_2),
-    databaseURL: 'https://burguer-queen-api-client.firebaseio.com'
+    databaseURL: process.env.FIREBASE_DATABASE_URL_2
   }, 
   'second'
 );
 
 const thirdApp = admin.initializeApp({
   credential: admin.credential.cert(process.env.GOOGLE_APPLICATION_CREDENTIALS_3),
-  databaseURL: 'https://foodtrack-6348d-default-rtdb.firebaseio.com'
+  databaseURL: process.env.FIREBASE_DATABASE_URL_3
 }, 'third');
 
 
