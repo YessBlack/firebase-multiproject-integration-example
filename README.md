@@ -24,6 +24,8 @@ Obtenga las credenciales de Firebase para cada proyecto que desee integrar. Pued
 
 Cree archivos JSON separados para cada proyecto y coloque las credenciales en estos archivos. Por ejemplo, firebase-config-project1.json, firebase-config-project2.json, etc.
 
+![image](https://github.com/YessBlack/firebase-multiproject-integration-example/assets/70681219/465c65b1-296d-44d7-8862-0b395a1ec730)
+
 ### Paso 3: Configuración de Variables de Entorno
 Cree un archivo .env en la raíz del proyecto para definir las variables de entorno que hacen referencia a los archivos de configuración de Firebase. El archivo .env debe tener el siguiente formato:
 
@@ -35,6 +37,14 @@ FIREBASE_CONFIG_PROJECT2=./firebase-config-project2.json
 ````
 
 <i>Reemplace las rutas con las ubicaciones de sus archivos de configuración de Firebase.</i>
+
+Si desea incluir en las variables de entorno las URLs de las base de datos, puede hacerlo:
+
+````
+
+FIREBASE_DATABASE_URL_1="https://<project-name>-default-rtdb.firebaseio.com"
+FIREBASE_DATABASE_URL_2="https://<project-name>-default-rtdb.firebaseio.com"
+````
 
 Paso 4: Ejecución del Proyecto
 Ejecute el proyecto con el siguiente comando:
